@@ -1,6 +1,6 @@
 # Purpose
 
-The goal of this script is to send out a digest of committed sprints points every week for the current sprints and the previously completed sprint.
+This is an airflow script to pull metrics from codecov.io.
 
 Run the scripts with the following command:
-`bundle exec ruby script_name.rb`
+`bundle exec ruby airflow-job.rb`

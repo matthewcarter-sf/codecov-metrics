@@ -1,1 +1,1 @@
-docker build --rm -t jira-metrics:latest .
+docker build --rm -t codecov-metrics:latest .

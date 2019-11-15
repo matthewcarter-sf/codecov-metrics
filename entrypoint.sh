@@ -1,1 +1,1 @@
-bundle exec ruby digest_email_lambda.rb
+bundle exec ruby airflow-job.rb

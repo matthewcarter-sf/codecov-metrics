@@ -1,8 +1,8 @@
 # VERSION 0.0.1
-# AUTHOR: Peter Myers
-# DESCRIPTION: Jira Metrics Report
-# BUILD: docker build --rm -t scalefactor/jira-metrics .
-# SOURCE: https://github.com/petermyers/jira-metrics
+# AUTHOR: Matthew Carter
+# DESCRIPTION: Codecov Metrics Report
+# BUILD: docker build --rm -t scalefactor/codecov-metrics .
+# SOURCE: https://github.com/matthewcarter-sf/codecov-metrics
 
 FROM ruby:2.6.3-alpine
 
