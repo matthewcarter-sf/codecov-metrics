@@ -12,10 +12,23 @@ repositories = [
 $codecov = Connectors::Codecov.new
 
 branch = 'master'
-reports = repositories.each do |repo|
+data = repositories.map do |repo|
   response = $codecov.get_single_branch(repo, branch)
   coverage = response.dig('commit', 'totals', 'c')
-  puts "#{repo} #{branch} coverage: #{coverage}%"
+  {
+    repository: repo,
+    branch: branch,
+    coverage: coverage,
+    time: Time.now
+  }
+end.to_json
+
+puts "#{data}"
+
+if ENV.fetch('IS_DOCKER', false)
+  File.open('/airflow/xcom/return.json', 'w') do |file|
+    file.puts data
+  end
 end
 
 puts "Finished airflow-job execution for codecov-metrics"
