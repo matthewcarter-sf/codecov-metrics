@@ -17,7 +17,7 @@ GEM
       aws-eventstream (~> 1.0, >= 1.0.2)
     dotenv (2.5.0)
     irb (1.0.0)
-    jmespath (1.4.0)
+    jmespath (1.6.1)
     mini_portile2 (2.4.0)
     nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
